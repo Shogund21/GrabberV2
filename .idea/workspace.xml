@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e07eb10-8aa7-4b68-aef3-0452ac254222" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search_cache.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/search_cache.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/youtube_scraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youtube_scraper.spec" beforeDir="false" afterPath="$PROJECT_DIR$/youtube_scraper.spec" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.youtube_scraper.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "settings.editor.selected.configurable": "vcs.Git"
   }
