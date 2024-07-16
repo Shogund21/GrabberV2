@@ -1,0 +1,219 @@
+Index: visualization.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/visualization.py b/visualization.py
+--- a/visualization.py	(revision 7121bbe67cd898017e2ad54d666961e6e1ea4a6b)
++++ b/visualization.py	(date 1721100549669)
+@@ -1,0 +1,13 @@
++import matplotlib.pyplot as plt
++
++def display_trending_chart(videos):
++    # Example function to plot a chart of trending videos
++    names = [video['name'] for video in videos]
++    views = [int(video['views']) for video in videos]
++
++    plt.figure(figsize=(10, 5))
++    plt.barh(names, views, color='blue')
++    plt.xlabel('Views')
++    plt.ylabel('Video Name')
++    plt.title('Trending Videos')
++    plt.show()
+Index: youtube_api_key.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>obtain one from Google Dev.\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/youtube_api_key.txt b/youtube_api_key.txt
+--- a/youtube_api_key.txt	(revision 7121bbe67cd898017e2ad54d666961e6e1ea4a6b)
++++ b/youtube_api_key.txt	(date 1721100549669)
+@@ -1,1 +1,1 @@
+-obtain one from Google Dev.
++AIzaSyDjAlMLjlxGoD7ESV4VggQwmSrJX-6Lnls
+\ No newline at end of file
+Index: requirements.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>altgraph==0.17.4\r\nbeautifulsoup4==4.12.3\r\ncachetools==5.3.3\r\ncertifi==2024.7.4\r\ncharset-normalizer==3.3.2\r\ncontourpy==1.2.1\r\ncycler==0.12.1\r\nfonttools==4.53.1\r\ngoogle-api-core==2.19.1\r\ngoogle-api-python-client==2.137.0\r\ngoogle-auth==2.32.0\r\ngoogle-auth-httplib2==0.2.0\r\ngoogleapis-common-protos==1.63.2\r\nhttplib2==0.22.0\r\nidna==3.7\r\nkiwisolver==1.4.5\r\nmatplotlib==3.9.1\r\nnumpy==2.0.0\r\npackaging==24.1\r\npefile==2023.2.7\r\npillow==10.4.0\r\nproto-plus==1.24.0\r\nprotobuf==5.27.2\r\npyasn1==0.6.0\r\npyasn1_modules==0.4.0\r\npyinstaller==6.9.0\r\npyinstaller-hooks-contrib==2024.7\r\npyparsing==3.1.2\r\npython-dateutil==2.9.0.post0\r\npywin32-ctypes==0.2.2\r\nrequests==2.32.3\r\nrsa==4.9\r\nsetuptools==70.3.0\r\nsix==1.16.0\r\nsoupsieve==2.5\r\nuritemplate==4.1.1\r\nurllib3==2.2.2\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-16LE
+===================================================================
+diff --git a/requirements.txt b/requirements.txt
+--- a/requirements.txt	(revision 7121bbe67cd898017e2ad54d666961e6e1ea4a6b)
++++ b/requirements.txt	(date 1721100549668)
+@@ -1,37 +1,69 @@
++alembic==1.13.2
+ altgraph==0.17.4
+ beautifulsoup4==4.12.3
++blinker==1.8.2
+ cachetools==5.3.3
+ certifi==2024.7.4
+ charset-normalizer==3.3.2
++click==8.1.7
++colorama==0.4.6
++comtypes==1.4.4
+ contourpy==1.2.1
+ cycler==0.12.1
++Flask==3.0.3
++Flask-Login==0.6.3
++Flask-Migrate==4.0.7
++Flask-SQLAlchemy==3.1.1
+ fonttools==4.53.1
+ google-api-core==2.19.1
+ google-api-python-client==2.137.0
+ google-auth==2.32.0
+ google-auth-httplib2==0.2.0
+ googleapis-common-protos==1.63.2
++greenlet==3.0.3
+ httplib2==0.22.0
+ idna==3.7
++itsdangerous==2.2.0
++Jinja2==3.1.4
++joblib==1.4.2
+ kiwisolver==1.4.5
++Mako==1.3.5
++MarkupSafe==2.1.5
+ matplotlib==3.9.1
++nltk==3.8.1
+ numpy==2.0.0
+ packaging==24.1
++pandas==2.2.2
++passlib==1.7.4
+ pefile==2023.2.7
+ pillow==10.4.0
++pinocchio==0.4.3
+ proto-plus==1.24.0
+ protobuf==5.27.2
+ pyasn1==0.6.0
+ pyasn1_modules==0.4.0
++PyAudio==0.2.14
+ pyinstaller==6.9.0
+ pyinstaller-hooks-contrib==2024.7
+ pyparsing==3.1.2
++pypiwin32==223
+ python-dateutil==2.9.0.post0
++pyttsx3==2.90
++pytz==2024.1
++pywin32==306
+ pywin32-ctypes==0.2.2
++regex==2024.5.15
+ requests==2.32.3
+ rsa==4.9
+ setuptools==70.3.0
+ six==1.16.0
+ soupsieve==2.5
++SpeechRecognition==3.10.4
++SQLAlchemy==2.0.31
++textblob==0.18.0.post0
++tqdm==4.66.4
++typing_extensions==4.12.2
++tzdata==2024.1
+ uritemplate==4.1.1
+ urllib3==2.2.2
++Werkzeug==3.0.3
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Black\">\r\n    <option name=\"sdkName\" value=\"Python 3.12 (GrabberV2)\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.12 (GrabberV2)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 7121bbe67cd898017e2ad54d666961e6e1ea4a6b)
++++ b/.idea/misc.xml	(date 1721100549667)
+@@ -3,5 +3,5 @@
+   <component name="Black">
+     <option name="sdkName" value="Python 3.12 (GrabberV2)" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (GrabberV2)" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (Shadow-interview-assistant)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"3e07eb10-8aa7-4b68-aef3-0452ac254222\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.gitignore\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/LICENSE\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/README.md\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"lastFilter\": {\r\n    \"state\": \"OPEN\",\r\n    \"assignee\": \"Shogund21\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/Shogund21/GrabberV2.git\",\r\n    \"accountId\": \"7ec07b2a-7f7b-46ec-b833-6db3de08fd27\"\r\n  }\r\n}]]></component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/.venv/.gitignore\" root0=\"SKIP_INSPECTION\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 8\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2j9Zqa2US51w1QFYO4nPrxx0aki\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"Python.youtube_scraper.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"Merging main\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"settings.editor.selected.configurable\": \"vcs.Git\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"youtube_scraper\" type=\"PythonConfigurationType\" factoryName=\"Python\" nameIsGenerated=\"true\">\r\n      <module name=\"GrabberV2\" />\r\n      <option name=\"ENV_FILES\" value=\"\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n        <env name=\"YOUTUBE_API_KEY\" value=\"AIzaSyDjAlMLjlxGoD7ESV4VggQwmSrJX-6Lnls\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/youtube_scraper.py\" />\r\n      <option name=\"PARAMETERS\" value=\"\" />\r\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\r\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\r\n      <option name=\"MODULE_MODE\" value=\"false\" />\r\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\r\n      <option name=\"INPUT_FILE\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration>C:\\Users\\dixon\\AppData\\Roaming\\Subversion</configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"3e07eb10-8aa7-4b68-aef3-0452ac254222\" name=\"Changes\" comment=\"\" />\r\n      <created>1720801444841</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1720801444841</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"UnknownFeatures\">\r\n    <option featureType=\"com.intellij.fileTypeFactory\" implementationName=\".env\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7121bbe67cd898017e2ad54d666961e6e1ea4a6b)
++++ b/.idea/workspace.xml	(date 1721100565646)
+@@ -17,18 +17,18 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+-  "lastFilter": {
+-    "state": "OPEN",
+-    "assignee": "Shogund21"
++  <component name="GitHubPullRequestSearchHistory">{
++  &quot;lastFilter&quot;: {
++    &quot;state&quot;: &quot;OPEN&quot;,
++    &quot;assignee&quot;: &quot;Shogund21&quot;
+   }
+-}]]></component>
+-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+-  "selectedUrlAndAccountId": {
+-    "url": "https://github.com/Shogund21/GrabberV2.git",
+-    "accountId": "7ec07b2a-7f7b-46ec-b833-6db3de08fd27"
++}</component>
++  <component name="GithubPullRequestsUISettings">{
++  &quot;selectedUrlAndAccountId&quot;: {
++    &quot;url&quot;: &quot;https://github.com/Shogund21/GrabberV2.git&quot;,
++    &quot;accountId&quot;: &quot;7ec07b2a-7f7b-46ec-b833-6db3de08fd27&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="HighlightingSettingsPerFile">
+     <setting file="file://$PROJECT_DIR$/.venv/.gitignore" root0="SKIP_INSPECTION" />
+   </component>
+@@ -43,16 +43,16 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "Python.youtube_scraper.executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "Merging main",
+-    "ignore.virus.scanning.warn.message": "true",
+-    "settings.editor.selected.configurable": "vcs.Git"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;Python.youtube_scraper.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
++    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager">
+     <configuration name="youtube_scraper" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+       <module name="GrabberV2" />
+Index: .idea/GrabberV2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/.venv\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/GrabberV2.iml b/.idea/GrabberV2.iml
+--- a/.idea/GrabberV2.iml	(revision 7121bbe67cd898017e2ad54d666961e6e1ea4a6b)
++++ b/.idea/GrabberV2.iml	(date 1721100549667)
+@@ -4,7 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+     </content>
+-    <orderEntry type="inheritedJdk" />
++    <orderEntry type="jdk" jdkName="Python 3.12 (Shadow-interview-assistant)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
